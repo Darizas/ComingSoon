@@ -30,23 +30,40 @@
     }
     .counter {
       color: white;
-      margin: 10vh 0;
+      padding: 12vh 0;
       .counter__block {
-          display: inline-block;
-          padding: 0 2vw;
+        display: inline-block;
+        padding: 0 2vw;
         .digits {
           font-size: 7vh;
           font-weight: 800;
         }
         .letters {
-            text-transform: uppercase;
-            padding-top: 1vh;
+          text-transform: uppercase;
+          padding-top: 1vh;
         }
       }
     }
+    input[type="email"] {
+      background-color: transparent;
+      width: 35vw;
+      height: 4vh;
+      border-bottom: 2px solid white;
+      &::-webkit-input-placeholder {
+        color: white;
+        font-size: 1.5vh;
+      }
+    }
+    .red__button {
+        padding: 5vh 0;
+        button {
+            font-size: 1.5vmin;
+            padding: 1.7vmin 5vmin;
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+            background-color: #ea1e63;
+            color: white;
+        }
+    }
   }
-}
-
-.letters {
-  display: inline-block;
 }

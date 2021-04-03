@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper .title .counter {
   color: white;
-  margin: 10vh 0;
+  padding: 12vh 0;
 }
 
 .wrapper .title .counter .counter__block {
@@ -127,6 +127,27 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 1vh;
 }
 
-.letters {
-  display: inline-block;
+.wrapper .title input[type="email"] {
+  background-color: transparent;
+  width: 35vw;
+  height: 4vh;
+  border-bottom: 2px solid white;
+}
+
+.wrapper .title input[type="email"]::-webkit-input-placeholder {
+  color: white;
+  font-size: 1.5vh;
+}
+
+.wrapper .title .red__button {
+  padding: 5vh 0;
+}
+
+.wrapper .title .red__button button {
+  font-size: 1.5vmin;
+  padding: 1.7vmin 5vmin;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  background-color: #ea1e63;
+  color: white;
 }
