@@ -13,7 +13,7 @@
     <div class="wrapper">
         <div class="title">
             <div class="logo">
-                <img src="" alt="Logo">
+                <img src="./img/Logo.png" alt="Logo">
             </div>
             <div class="description">
                 <h1>coming soon</h1>
@@ -21,7 +21,22 @@
                 <p>Enter your email to request an early invittion!</p>
             </div>
             <div class="counter">
-
+                <div class="counter__block">
+                    <div id="days" class="digits"></div>
+                    <div class="letters">days</div>
+                </div>
+                <div class="counter__block">
+                    <div id="hours" class="digits"></div>
+                    <div class="letters">hours</div>
+                </div>
+                <div class="counter__block">
+                    <div id="minutes" class="digits"></div>
+                    <div class="letters">minutes</div>
+                </div>
+                <div class="counter__block">
+                    <div id="seconds" class="digits"></div>
+                    <div class="letters">seconds</div>
+                </div>
             </div>
             <div class="email__input">
                 <input type="email" name="email" placeholder="Type your email">
@@ -56,6 +71,30 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        var countDownDate = new Date("Dec 31, 2021 15:37:25").getTime();
+        
+        var x = setInterval(function() {
+        
+          var now = new Date().getTime();
+            
+          var distance = countDownDate - now;
+            
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+            
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
 </body>
 </html>

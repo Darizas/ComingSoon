@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .wrapper .title {
@@ -84,4 +84,49 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   align-items: center;
   text-align: center;
+}
+
+.wrapper .title .logo {
+  padding-top: 10vh;
+}
+
+.wrapper .title .description {
+  padding-top: 5vh;
+}
+
+.wrapper .title .description h1 {
+  text-transform: uppercase;
+  font-size: 7vh;
+  font-weight: 900;
+  padding-bottom: 2vh;
+}
+
+.wrapper .title .description p {
+  padding-top: 1vh;
+  color: #888888;
+  font-size: 2.5vh;
+}
+
+.wrapper .title .counter {
+  color: white;
+  margin: 10vh 0;
+}
+
+.wrapper .title .counter .counter__block {
+  display: inline-block;
+  padding: 0 2vw;
+}
+
+.wrapper .title .counter .counter__block .digits {
+  font-size: 7vh;
+  font-weight: 800;
+}
+
+.wrapper .title .counter .counter__block .letters {
+  text-transform: uppercase;
+  padding-top: 1vh;
+}
+
+.letters {
+  display: inline-block;
 }
