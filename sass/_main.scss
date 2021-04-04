@@ -66,7 +66,7 @@
     width: 100%;
     height: 65vh;
     padding: 9vh 0;
-    span {
+    .span__red {
       color: #ea1e63;
     }
     h2 {
@@ -86,6 +86,58 @@
       width: 60%;
       float: left;
       padding: 0 10vmin;
+      .graph {
+        width: 100%;
+        .bar {
+          height: 5px;
+          position: relative;
+          margin: 15px 0 30px;
+        }
+        .bar::before {
+          content: '';
+          width: 100%;
+          position: absolute;
+          left: 0;
+          height: 5px;
+          top: 0;
+          z-index: -2;
+          background: rgb(136, 136, 136);
+        }
+        .bar::after {
+          content: '';
+          background: #399099;
+          height: 5px;
+          transition: 0.7s;
+          display: block;
+          width: 100%;
+          animation: bar-before 1 4s;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+        .bar1::after {
+          max-width: 90%;
+        }
+        .bar2::after {
+          max-width: 86%;
+        }
+        .bar3::after {
+          max-width: 78%;
+        }
+        .span__bar1 {
+          display: inline-block;
+          width: 90%;
+        }
+        .span__bar2 {
+          display: inline-block;
+          width: 86%;
+        }
+        .span__bar3 {
+          display: inline-block;
+          width: 78%;
+        }
+      }
     }
     .right {
       height: 100%;
@@ -136,5 +188,13 @@
       &:hover {
         background-color: #399099;
       }
+  }
+}
+@keyframes bar-before{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100%;
   }
 }

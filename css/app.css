@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 9vh 0;
 }
 
-.wrapper .middle span {
+.wrapper .middle .span__red {
   color: #ea1e63;
 }
 
@@ -175,6 +175,68 @@ h1, h2, h3, h4, h5, h6 {
   width: 60%;
   float: left;
   padding: 0 10vmin;
+}
+
+.wrapper .middle .left .graph {
+  width: 100%;
+}
+
+.wrapper .middle .left .graph .bar {
+  height: 5px;
+  position: relative;
+  margin: 15px 0 30px;
+}
+
+.wrapper .middle .left .graph .bar::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 5px;
+  top: 0;
+  z-index: -2;
+  background: #888888;
+}
+
+.wrapper .middle .left .graph .bar::after {
+  content: '';
+  background: #399099;
+  height: 5px;
+  transition: 0.7s;
+  display: block;
+  width: 100%;
+  animation: bar-before 1 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wrapper .middle .left .graph .bar1::after {
+  max-width: 90%;
+}
+
+.wrapper .middle .left .graph .bar2::after {
+  max-width: 86%;
+}
+
+.wrapper .middle .left .graph .bar3::after {
+  max-width: 78%;
+}
+
+.wrapper .middle .left .graph .span__bar1 {
+  display: inline-block;
+  width: 90%;
+}
+
+.wrapper .middle .left .graph .span__bar2 {
+  display: inline-block;
+  width: 86%;
+}
+
+.wrapper .middle .left .graph .span__bar3 {
+  display: inline-block;
+  width: 78%;
 }
 
 .wrapper .middle .right {
@@ -235,4 +297,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .red__button button:hover {
   background-color: #399099;
+}
+
+@keyframes bar-before {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
 }
