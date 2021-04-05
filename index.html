@@ -147,9 +147,20 @@
         }
 
         function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        }
+        currentYOffset = self.pageYOffset;
+        initYOffset = currentYOffset;
+
+        var intervalId = setInterval(function(){
+        currentYOffset -= initYOffset*0.05; 
+        document.body.scrollTop = currentYOffset ;
+        document.documentElement.scrollTop = currentYOffset;
+
+            if(self.pageYOffset == 0){
+            clearInterval(intervalId);
+            }
+        }, 20);
+
+}
         </script>
 </body>
 </html>
