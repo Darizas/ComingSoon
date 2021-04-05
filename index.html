@@ -46,8 +46,15 @@
             <div class="red__button">
                 <button class="subscribe" type="submit">Subscribe Now</button>
             </div>
-            <div class="mouse__animation">
-
+            <div class="mouse__scroll">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div>
+                    <span class="arrows one"></span>
+                    <span class="arrows two"></span>
+                    <span class="arrows three"></span>
+                </div>
             </div>
         </div>
         <div class="middle">
@@ -78,6 +85,7 @@
             
         </div>
         <div class="footer">
+            <button onclick="topFunction()" id="upBtn" title="Go to top"><i class="far fa-caret-square-up"></i></i></button>
             <div class="social">
                 <a href="http://"><i class="fab fa-facebook-f"></i></a>
                 <a href="http://"><i class="fab fa-twitter"></i></a>
@@ -125,6 +133,23 @@
             document.getElementById("timer").innerHTML = "EXPIRED";
           }
         }, 1000);
+
+        mybutton = document.getElementById("upBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
         </script>
 </body>
 </html>
