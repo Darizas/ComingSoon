@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.7s;
   display: block;
   width: 100%;
-  animation: bar-before 1 4s;
+  animation: 3s slidein;
   position: absolute;
   top: 0;
   left: 0;
@@ -287,6 +287,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+.wrapper .footer {
+  width: 100%;
+  height: 35vh;
+  background-color: #3999a9;
+}
+
 .red__button {
   padding-top: 5vh;
 }
@@ -301,10 +307,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .red__button button:hover {
-  background-color: #4fcfdd;
+  background-color: #3999a9;
 }
 
-@keyframes bar-before {
+@keyframes slidein {
   0% {
     width: 0px;
   }
