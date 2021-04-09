@@ -76,9 +76,39 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.wrapper header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #91c2d965;
+}
+
+.wrapper header .logo {
+  width: 30%;
+  font-size: 6vmin;
+  font-weight: bold;
+  color: #888888;
+  padding: 10px 15px 0;
+  float: left;
+}
+
+.wrapper header .nav {
+  width: 70%;
+  font-size: 2.5vmin;
+  text-align: right;
+  vertical-align: middle;
+  color: #888888;
+  padding: 10px 15px 0;
+  float: left;
+}
+
+.wrapper header .nav a {
+  margin: 10px 15px 0;
+}
+
 .wrapper .title {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-image: url(../img/backgrnd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,11 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .title .logo {
-  padding-top: 10vmin;
+  padding-top: 5%;
 }
 
 .wrapper .title .description {
-  padding-top: 5vmin;
+  padding-top: 3%;
 }
 
 .wrapper .title .description h1 {
@@ -197,7 +227,6 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper .title .mouse__scroll .one {
   margin-top: 1px;
   animation-direction: alternate;
-  animation-delay: alternate;
 }
 
 .wrapper .title .mouse__scroll .two {
