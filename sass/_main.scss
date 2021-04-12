@@ -12,22 +12,45 @@
       width: 30%;
       font-size: 6vmin;
       font-weight: bold;
-      color:  rgb(136, 136, 136);
+      color: rgb(136, 136, 136);
       padding: 10px 15px 0;
       float: left;
     }
-    .nav {
+    .right__menu{
       width: 70%;
-      font-size: 2.5vmin;
       text-align: right;
       vertical-align: middle;
-      color:  rgb(136, 136, 136);
-      padding: 10px 15px 0;
       float: left;
+      padding: 10px 15px 0;
+    .nav {
+      font-size: 2.5vmin;
+      color: rgb(136, 136, 136);
       a {
         margin: 10px 15px 0;
       }
+      @media (max-width: 900px) {
+        display: none;
+      }
     }
+    .burger {
+      display: none;
+      @media (max-width: 900px) {
+        display: inline-block;
+        cursor: pointer;
+        .bar {
+          width: 35px;
+          height: 5px;
+          background-color: rgb(136, 136, 136);
+          margin: 6px 0;
+        }
+        &:hover {
+          .bar {
+          background-color: white;
+          }
+        }
+      }
+    }
+  }
   }
   .title {
     width: 100%;
@@ -125,22 +148,24 @@
         width: 16px;
         height: 16px;
       }
-      .one, .two, .three {
-          animation: mouse-scroll 1s infinite;
+      .one,
+      .two,
+      .three {
+        animation: mouse-scroll 1s infinite;
       }
       .one {
         margin-top: 1px;
         animation-direction: alternate;
       }
-      
+
       .two {
-        animation-delay: .2s;
+        animation-delay: 0.2s;
         animation-direction: alternate;
         margin-top: -6px;
       }
-      
+
       .three {
-        animation-delay: .3s;
+        animation-delay: 0.3s;
         animation-direction: alternate;
         margin-top: -6px;
       }
@@ -179,7 +204,7 @@
           margin: 15px 0 30px;
         }
         .bar::before {
-          content: '';
+          content: "";
           width: 100%;
           position: absolute;
           left: 0;
@@ -189,7 +214,7 @@
           background: rgb(136, 136, 136);
         }
         .bar::after {
-          content: '';
+          content: "";
           background: #4fcfdd;
           height: 5px;
           transition: 0.7s;
@@ -227,15 +252,21 @@
           width: 78%;
         }
       }
+        @media (max-width: 900px) {
+          height: 50%;
+          width: 100%;
+        }
     }
     .right {
       height: auto;
       width: 40%;
       float: left;
       padding: 0 7vw;
-      .form__name, .form__email, .form__message{
+      .form__name,
+      .form__email,
+      .form__message {
         background-color: transparent;
-        color:rgb(136, 136, 136);
+        color: rgb(136, 136, 136);
         font-size: 1.7vmin;
         border-bottom: 2px solid rgb(136, 136, 136);
         &::-webkit-input-placeholder {
@@ -262,6 +293,10 @@
       }
       .red__button {
         text-align: right;
+      }
+      @media (max-width: 900px) {
+        height: 50%;
+        width: 100%;
       }
     }
   }
@@ -327,15 +362,15 @@
 .red__button {
   padding-top: 5vh;
   button {
-      font-size: 1.5vmin;
-      padding: 1.7vmin 5vmin;
-      border-radius: 5px;
-      box-shadow: 0 0 5px 3px black;
-      background-color: #ea1e63;
-      color: white;
-      &:hover {
-        background-color: #3999a9;
-      }
+    font-size: 1.5vmin;
+    padding: 1.7vmin 5vmin;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px black;
+    background-color: #ea1e63;
+    color: white;
+    &:hover {
+      background-color: #3999a9;
+    }
   }
 }
 
@@ -348,25 +383,30 @@
   }
 }
 @keyframes mouse-wheel {
-  0% { top: 1px; }
-  25% { top: 2px; }
-  50% { top: 3px;}
-  75% { top: 2px;}
-  100% { top: 1px;}
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
 }
 @keyframes mouse-scroll {
-  0%   { opacity: 0; }
-  50%  { opacity: .5; }
-  100% { opacity: 1; }
-}
-
-@media screen and (max-width: 900px) {
-  .wrapper .middle .left {
-    height: 50%;
-    width: 100%;
+  0% {
+    opacity: 0;
   }
-  .wrapper .middle .right {
-    height: 50%;
-    width: 100%;
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
