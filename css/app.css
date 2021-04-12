@@ -455,8 +455,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper .footer .social {
-  font-size: 2.7vmin;
+  font-size: 2.8vmin;
   padding: 3vmin 0;
+}
+
+.wrapper .footer .social .fab, .wrapper .footer .social .fas {
+  width: 4vmin;
+  height: 4vmin;
+  padding: 0.6vmin;
+}
+
+.wrapper .footer .social .fab:hover, .wrapper .footer .social .fas:hover {
+  border-radius: 25%;
+  background-color: white;
+  color: #3999a9;
 }
 
 .wrapper .footer .social a {
