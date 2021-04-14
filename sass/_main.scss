@@ -220,7 +220,7 @@
           transition: 0.7s;
           display: block;
           width: 100%;
-          animation: 3s slidein;
+          animation: 15s slidein;
           position: absolute;
           top: 0;
           left: 0;
@@ -327,6 +327,7 @@
           border-radius: 25%;
           background-color: white;
           color: #3999a9;
+          transition: .5s;
         }
       }
       a {

@@ -332,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.7s;
   display: block;
   width: 100%;
-  animation: 3s slidein;
+  animation: 15s slidein;
   position: absolute;
   top: 0;
   left: 0;
@@ -469,6 +469,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 25%;
   background-color: white;
   color: #3999a9;
+  transition: .5s;
 }
 
 .wrapper .footer .social a {
