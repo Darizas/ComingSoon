@@ -122,7 +122,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) {
   .wrapper header .right__menu .burger {
     display: inline-block;
+    height: 40px;
     cursor: pointer;
+    position: relative;
   }
   .wrapper header .right__menu .burger .bar {
     width: 35px;
@@ -132,6 +134,21 @@ h1, h2, h3, h4, h5, h6 {
   }
   .wrapper header .right__menu .burger:hover .bar {
     background-color: white;
+  }
+  .wrapper header .right__menu .burger:hover .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .wrapper header .right__menu .burger:hover .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 12px;
+    transition: 1s;
+  }
+  .wrapper header .right__menu .burger:hover .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 10px;
+    transition: 1s;
   }
 }
 
