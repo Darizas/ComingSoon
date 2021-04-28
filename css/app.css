@@ -101,7 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper header .right__menu .nav {
+  display: flex;
   font-size: 2.5vmin;
+  flex-direction: row-reverse;
   color: #888888;
 }
 
@@ -110,9 +112,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
-  .wrapper header .right__menu .nav {
-    display: none;
+  .wrapper header .right__menu .nav a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 5vmin;
+    text-align: center;
+    margin-bottom: 5%;
   }
+  .wrapper header .right__menu .nav a:first-of-type {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper header .right__menu .nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(255, 235, 205, 0.75);
+    height: 100vh;
+    transform: translatey(-100%);
+  }
+}
+
+.wrapper header .right__menu .on {
+  transform: translatey(0%);
+  transition: 1s;
 }
 
 .wrapper header .right__menu .burger {

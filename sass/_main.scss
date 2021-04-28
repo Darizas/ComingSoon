@@ -23,14 +23,39 @@
       float: left;
       padding: 10px 15px 0;
     .nav {
+      display: flex;
       font-size: 2.5vmin;
+      flex-direction: row-reverse;
       color: rgb(136, 136, 136);
       a {
         margin: 10px 15px 0;
+        @media (max-width: 900px) {
+          display: block;
+          color: black;
+          font-weight: bold;
+          font-size: 5vmin;
+          text-align: center;
+          margin-bottom: 5%;;
+          &:first-of-type {
+            margin-top: 20%;
+          }
+        }
       }
       @media (max-width: 900px) {
-        display: none;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          background-color: rgba(255, 235, 205, 0.75);
+          height: 100vh;
+          transform: translatey(-100%);
       }
+    }
+    .on {
+      transform: translatey(0%);
+      transition: 1s;
     }
     .burger {
       display: none;
